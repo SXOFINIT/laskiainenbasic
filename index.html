@@ -52,7 +52,7 @@
         <button class="secondary" onclick="clearWeekInput()">Tyhjennä</button>
       </div>
       <div class="small" id="weekCountInfo" style="margin-top:10px;">Lisättyjä ruokalistoja: 0</div>
-      <div class="info-box">Lisää viikot yksi kerrallaan. Näin usean viikon data pysyy helpommin oikeassa järjestyksessä.</div>
+      <div class="info-box">Vinkki: lisää viikot yksi kerrallaan. Näin usean viikon data pysyy helpommin oikeassa järjestyksessä.</div>
     </div>
 
     <div class="card">
@@ -108,7 +108,7 @@ const FIN_DAYS={Monday:'Maanantai',Tuesday:'Tiistai',Wednesday:'Keskiviikko',Thu
 const DAY_ALIASES={Monday:['Monday','Maanantai'],Tuesday:['Tuesday','Tiistai'],Wednesday:['Wednesday','Keskiviikko'],Thursday:['Thursday','Torstai'],Friday:['Friday','Perjantai'],Saturday:['Saturday','Lauantai'],Sunday:['Sunday','Sunnuntai']};
 const DAY_LOOKUP=Object.fromEntries(Object.entries(DAY_ALIASES).flatMap(([key,values])=>values.map(value=>[value.toLowerCase(),key])));
 const DAY_PATTERN=/^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday|Maanantai|Tiistai|Keskiviikko|Torstai|Perjantai|Lauantai|Sunnuntai)$/i;
-const DATE_RE=/^\d{1,2}\/\d{1,2}\/\d{4}$/;
+const DATE_RE=/^\d{1,2}[./]\d{1,2}[./]\d{4}$/;
 const AVERAGE_LABELS=['Average per Week','Viikon keskiarvo'];
 const COLUMN_HEADER_SETS=[['Gross SP / F-QTY','COS'],['Brutto myyntihinta / E.Määrä','Ra. kust.']];
 const DAY_WEEK_LINE_RE=/^(Day|Päivä)\s+\d+\s+(Week|Viikko)\s+\d+$/i;
